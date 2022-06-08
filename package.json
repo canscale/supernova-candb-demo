@@ -1,0 +1,14 @@
+{
+  "name": "candb-actor-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node tools/generate.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "generate-template-files": "^3.2.0"
+  }
+}
