@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["ES2017", "DOM"],
+    "module": "commonjs",
+    "target": "ES2017",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    // below are for build process visibility
+    "declaration": true,
+    "noImplicitAny": true
+  },
+  "include": [
+    "src/**/*",
+  ],
+}

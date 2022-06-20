@@ -1,0 +1,67 @@
+type ScanCommentResult = 
+ record {
+   comments: vec CommentResult;
+   nextKey: opt text;
+ };
+type ScalingOptions = 
+ record {
+   autoScalingCanisterId: text;
+   limit: nat;
+   limitType: ScalingLimitType;
+ };
+type ScalingLimitType = 
+ variant {
+   count;
+   heapSize;
+ };
+type CommentResult = 
+ record {
+   body: text;
+   commentId: text;
+   createdUTC: text;
+   permalink: text;
+   rowNumber: text;
+   score: int;
+   sentiment: float64;
+   subredditId: text;
+   subredditName: text;
+ };
+type CommentRequestInput = 
+ record {
+   body: text;
+   commentId: text;
+   createdUTC: text;
+   isoString: text;
+   lexicographicScore: text;
+   permalink: text;
+   rowNumber: text;
+   score: int;
+   sentiment: float64;
+   subredditId: text;
+   subredditName: text;
+ };
+type Comment = 
+ service {
+   getCanisterMetrics: () -> (CanisterMetrics) query;
+   getPK: () -> (text) query;
+   getScalingOptions: () -> (ScalingOptions) query;
+   processComments: (vec CommentRequestInput) -> ();
+   scanComments: (text, text, nat, opt bool) -> (ScanCommentResult) query;
+   skExists: (text) -> (bool) query;
+   transferCycles: () -> ();
+ };
+type CanisterMetrics = 
+ record {
+   cycles: nat;
+   entityCount: nat;
+   heapSize: nat;
+   scalingStatus: variant {
+                    complete;
+                    not_started;
+                    started;
+                  };
+ };
+service : (record {
+             primaryKey: text;
+             scalingOptions: ScalingOptions;
+           }) -> Comment

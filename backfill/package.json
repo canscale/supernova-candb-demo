@@ -1,0 +1,23 @@
+{
+  "name": "supernova-cd-demo-backfill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "upgrade": "npx ts-node src/upgrade/index.ts && npm run alert-done",
+    "load": "npx ts-node src/load/index.ts && npm run alert-done",
+    "delete": "npx ts-node src/delete/index.ts && npm run alert-done",
+    "alert-done": "osascript -e 'beep beep beep'"
+  },
+  "author": "Byron Becker",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "fast-csv": "^4.3.6",
+    "ts-node": "^10.8.1"
+  },
+  "dependencies": {
+    "candb-client-typescript-dev-testing": "^1.0.3",
+    "glob": "^8.0.3"
+  }
+}
