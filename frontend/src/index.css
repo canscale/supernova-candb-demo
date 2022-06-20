@@ -1,0 +1,139 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.app-header {
+  display: inline-flex;
+}
+
+.comments-page {
+  display: flex;
+}
+
+.query-select {
+  width: 300px;
+}
+
+.query-bar {
+  display: flex;
+  justify-content: left;
+}
+
+.dates-bar {
+  display: inline-flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.dates-bar-header {
+  color: #666666;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+}
+
+.dates-bar-to {
+  margin: 0px 30px;
+}
+
+.comment-query-buttons-wrapper {
+  display: inline-flex;
+  margin: 10px 0px;
+  
+}
+
+.comment-query-button {
+  min-width: 150px !important;
+  margin-right: 35px !important;
+  height: 36.5px;
+}
+
+.nextKey-text-wrapper {
+  margin-top: 10px;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
+
+.comments-result-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.hide-me {
+  display: none;
+}
+
+.comment-item-container {
+  display: flex;
+  padding-bottom: 20px;
+  margin: 20px 40px 0px 0px;
+  border-bottom: 1px solid grey;
+}
+
+.comment-item-order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 0px 20px;
+}
+
+.comment-metadata {
+  flex: 1;
+}
+
+.comment-item-header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0px;
+  padding-right: 20px;
+}
+
+.comment-item-header-subreddit-name {
+}
+
+.comment-item-header-datetime {
+  color: rgb(96,96,96);
+}
+
+.comment-text-container {
+}
+
+.comment-text {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 5px 20px 5px;
+  border-left: 1px solid grey;
+
+}
+
+.comment-scoring-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 50%;
+  margin: 10px 0px;
+}
+
+.example-custom-input {
+  cursor: pointer;
+  padding: 15px 50px 15px 15px;
+  margin: 10px 0px 10px;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+  letter-spacing: inherit;
+  font-weight: 400;
+  /*color: rgba(0, 0, 0, 0.87);*/
+  box-sizing: border-box;
+  border-color: rgba(0, 0, 0, 0.87);
+  border: solid 1px;
+  background-color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*max-width: calc(100% - 24px);*/
+  width: 160px;
+}

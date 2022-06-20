@@ -1,3 +1,10 @@
-node_modules
-.dfx
-.vessel
+**/node_modules
+**/.dfx
+**/.vessel
+**canister_ids.json
+
+**/.DS_Store
+**/dist
+
+tools
+backfill

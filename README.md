@@ -1,15 +1,31 @@
-# candb-quickstart-template
-Getting up and running with a multi-canister CanDB Backend project
+# supernova-candb-demo
+This project showcases what a simple multi-canister CanDB might look like.
 
-## Getting up and running
+## About the demo application 
+The demo application leverages ["The Reddit Covid Dataset"](https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-datase) data from Kaggle in tandem with the flexibility of CanDB to provides data access patterns such as:
+* get comments by subreddit name ordered by timestamp (i.e. newest posts by subreddit)
+* get comments ordered by score (i.e. global top posts)
+* get comments ordered by timestamp (i.e. global newest posts)
 
-1. First, clone this repo
-2. Every CanDB project must have an Index Canister. To create one, inside the cloned repo run `npm run generate` and select "Create CanDB IndexCanister Actor Canister From Template", then continue through the prompts. You should now see a `src/index/IndexCanister.mo` file.
-3. The Index Canister will help facilitate the spin-up and creation of canisters from a CanDB Actor. To create the bare minimum Actor that will work with CanDB, run `npm run generate` again, and then select "Create CanDB Actor Canister From Template". Fill in the `{{actor_class_name}}` of your actor, for example `User`, `Player`, or `Game`, and then continue through the prompts. You should now see a `src/{{actor_class_name}}/{{actor_class_name}}.mo` file.
+At the same time, this showcases the power of utilizing NoSQL data modeling similar to what might find with DynamoDB or Cassandra, and the similar power of the CanDB tooling in supporting pagination.
 
 
-TODO: 
-- Next steps, example Hello World project & more complicated examples, etc.
-- Decide whether this should go in the root CanDB package or be in a separate quickstart package like this (i.e. create-react-app style)
+## Data used in this demo project
+This demo project uses data taken from https://www.kaggle.com/datasets/pavellexyr/the-reddit-covid-dataset, which contains a comprehensive collection of posts and comments mentioning COVID in the comment body. This data contains additional metadata such as timestamp, score (upvote/downvote), and analyzed sentiment.
+
+Some light preprocessing on the csv data was done in Python to preprocess and chunk the data into csvs of 500 rows each to ensure no limits of the IC are hit in terms of per message size or per message cycle limit; 
+
+## Code Structure 
+This project has 3 main pieces, designated by the following folders
+
+1. `backend/` - This houses the code from which the data and apis are created. There are two types of canisters, an index canister, and a comment (Actor) canister.
+  a. The index canister is responsible for things like:
+    i. keeping track of PK -> canister ids
+    ii. spinning up new canisters and auto-scaling existing canisters
+    iii. performing rolling upgrades to canisters
+  b. The comment canister contains the API logic for retrieving comments and processing new comments
+2. `frontend/` - This houses the frontend code from which the demo interacts with the backend, performing requests to retrieve comments from the backend
+3. `backfill/` - This houses the code used to chunk uploads to the backend through the `processComments` backend API. Larger applications with existing data models will need to think through and plan out how they will migrate their existing (large amounts of) data to CanDB, so this serves as a very rough, but practical example showcasing that large amounts of data can be backfilled and processed into a working CanDB application.
+
 
 

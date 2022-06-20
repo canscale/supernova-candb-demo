@@ -1,0 +1,42 @@
+{
+  "name": "supernova-candb-demo-frontend",
+  "version": "1.0.0",
+  "description": "Demo frontend to showcase the Reddit comments example",
+  "main": "index.tsx",
+  "scripts": {
+    "start": "webpack serve --hot --mode development --env development",
+    "build": "webpack"
+  },
+  "author": "Byron Becker",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.12",
+    "@types/react-datepicker": "^4.4.2",
+    "@types/react-dom": "^18.0.5",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "events": "^3.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.3",
+    "util": "^0.12.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.3",
+    "candb-client-typescript-dev-testing": "^1.0.6",
+    "react": "^18.1.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.1.0"
+  }
+}
