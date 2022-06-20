@@ -1,0 +1,18 @@
+{
+  "name": "candb-actor-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-actor": "node tools/generate.js",
+    "generate-declarations": "dfx generate && ./comment_last_line.sh",
+    "copy-declarations": "cp -r src/declarations/* ../frontend/declarations && cp -r src/declarations/* ../backfill/declarations",
+    "refresh-declarations": "npm run generate-declarations && npm run copy-declarations",
+    "refresh-index": "dfx canister stop index && dfx canister delete index && dfx canister create index && dfx deploy index"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "generate-template-files": "^3.2.0"
+  }
+}

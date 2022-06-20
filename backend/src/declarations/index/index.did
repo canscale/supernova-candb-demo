@@ -1,0 +1,58 @@
+type UpgradePKRangeResult = 
+ record {
+   nextKey: opt text;
+   upgradeCanisterResults: vec record {
+                                 text;
+                                 InterCanisterActionResult;
+                               };
+ };
+type Tree = 
+ variant {
+   leaf;
+   node:
+    record {
+      Color;
+      Tree;
+      record {
+        text;
+        opt InterCanisterActionResult;
+      };
+      Tree;
+    };
+ };
+type InterCanisterActionResult = 
+ variant {
+   err: text;
+   ok;
+ };
+type IndexCanister = 
+ service {
+   createAdditionalCanisterForPK: (text) -> (text);
+   createCommentCanisterByPK: (text) -> (opt text);
+   deleteCommentsByPK: (text) -> (opt CanisterCleanupStatusMap);
+   getCanistersByPK: (text) -> (vec text) query;
+   getPKToCanisterMapping: () -> (vec record {
+                                        text;
+                                        vec CanisterId;
+                                      }) query;
+   upgradeCommentCanisters: (text, blob) ->
+    (vec record {
+           text;
+           InterCanisterActionResult;
+         });
+   upgradeCommentCanistersInPKRange: (text, text, blob) ->
+    (UpgradePKRangeResult);
+ };
+type Color = 
+ variant {
+   B;
+   R;
+ };
+type CanisterId = text;
+type CanisterCleanupStatusMap = 
+ record {
+   delete: Tree;
+   stop: Tree;
+   transfer: Tree;
+ };
+service : () -> IndexCanister
