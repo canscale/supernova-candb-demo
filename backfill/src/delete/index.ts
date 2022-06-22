@@ -1,6 +1,11 @@
 import { CanisterCleanupStatusMap, Color, InterCanisterActionResult, Tree } from "../../declarations/index/index.did";
 import { initializeIndexClient } from "../client";
 
+/** Personal Script for targetted deletion of canisters belonging to a specific partition key - see the go() method (lines 20-24)
+ * 
+ * The rest is just logging for me :)
+ */
+
 
 function parseTree(tree: Tree, step: string) {
   const t = tree as { 'node' : [Color, Tree, [string, [] | [InterCanisterActionResult]], Tree] };
@@ -17,7 +22,7 @@ function parseTree(tree: Tree, step: string) {
 async function go(isLocal: boolean) {
   const indexClient = await initializeIndexClient(isLocal)
 
-  const commentPKToDelete = "comment#2021-07-14";
+  const commentPKToDelete = "comment#2021-10-23";
   console.log("before deleting comment canister")
   const deleteStatusResult = (await indexClient.indexCanisterActor.deleteCommentsByPK(commentPKToDelete)) as CanisterCleanupStatusMap[];
   try {

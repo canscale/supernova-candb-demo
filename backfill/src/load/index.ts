@@ -3,6 +3,8 @@ import { formatRowsFromFile } from "./loader";
 import * as glob from "glob";
 import { initializeCommentClient, initializeIndexClient } from "../client";
 
+/** Script for loading csv files with the backfill process - see the go() method */
+
 async function getDatedDirectories() {
   let datedDirectories = await new Promise<string[]>((resolve, reject) => {
     glob.glob("chunks" + "/*/", function(err, res) {
@@ -45,7 +47,7 @@ async function go(isLocal: boolean) {
   // for (let i=0; i<datedDirectories.length; i+=1) {
 
   // I would manually update/change the "i" start/stop to have a process load 5 days of csvs into the application
-  for (let i=80; i<85; i+=1) {
+  for (let i=101; i<102; i+=1) {
     const datedDirectory = datedDirectories[i]
     console.log(`i=${i}, datedDirectory`, datedDirectory)
     const pk = `comment#${datedDirectory.split("/")[1]}`;
@@ -59,7 +61,13 @@ async function go(isLocal: boolean) {
       console.log(`rows.length = ${rows.length}`)
       await commentActorClient.update<Comment["processComments"]>(
         pk,
-        "TODO",
+        // This SK is only used for the backfill process, as I am batching 500 comments per request
+        // in each update call. The SK actually does not exist on any of the backend canisters, which
+        // ensures each backfill hits the most recently auto-scaled canister for the provided partition
+        // key (pk). In this specific case (not recommended for production use outside of backfills), it
+        // makes sense to use a sort key that you know will not exist in any of your canister storage
+        // partitions
+        "Backfill SK",
         (actor) => actor.processComments(rows)
       );
       console.log(`finished uploading ${filePath}`)
@@ -67,4 +75,4 @@ async function go(isLocal: boolean) {
   }
 };
 
-go(false)
+go(true)

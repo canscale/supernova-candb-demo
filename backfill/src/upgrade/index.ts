@@ -1,6 +1,7 @@
 import { loadWasm } from "candb-client-typescript-dev-testing/dist/ClientUtil";
 import { initializeIndexClient } from "../client"
 
+/** Script for performing rolling upgrades for all canisters in a partition key range - see the go() method */
 
 async function go(isLocal: boolean) {
   console.log("isLocal", isLocal)
@@ -14,4 +15,4 @@ async function go(isLocal: boolean) {
   console.log("upgrade complete")
 }
 
-go(false)
+go(true)
