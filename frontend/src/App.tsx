@@ -3,14 +3,14 @@ import * as React from "react";
 import { initializeCommentClient, intializeIndexClient } from "./client";
 import CommentPage from "./pages/CommentPage";
 import CanisterMonitoringPage from "./pages/CanisterMonitoringPage";
-import { getPKToCanisterMapping } from "./api";
+import { cachePKToCanisterMapping, getPKToCanisterMapping } from "./api";
 import { Button } from "@mui/material";
 
-function App() {
-  const isLocal = false;
-  const indexClient = intializeIndexClient(isLocal);
-  const commentClient = initializeCommentClient(isLocal, indexClient);
+const isLocal = false;
+const indexClient = intializeIndexClient(isLocal);
+const commentClient = initializeCommentClient(isLocal, indexClient);
 
+function App() {
   let [pkToCanisterMapping, setPKToCanisterMapping] = React.useState({});
   let [page, setPage] = React.useState('comments');
 
@@ -45,9 +45,8 @@ function App() {
 
   React.useEffect(() => {
     fetchMapping()
+    cachePKToCanisterMapping(commentClient)
   }, [])
-
-
 
   return (
     <div>

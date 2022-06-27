@@ -241,7 +241,8 @@ export async function getCommentsBySubreddit(commentClient: ActorClient<IndexCan
       [false] // descending order
     ),
     settledCommentsResultReducer,
-    { comments: [], nextKeys: [] }
+    { comments: [], nextKeys: [] },
+    true
   )
 
   return arrangeCommentsInDescendingTimestampOrder(allCanisterQueryResult, limit, getSubredditSK)
@@ -260,7 +261,8 @@ export async function getCommentsByTimestamp(commentClient: ActorClient<IndexCan
       [false] // descending order
     ),
     settledCommentsResultReducer,
-    { comments: [], nextKeys: [] }
+    { comments: [], nextKeys: [] },
+    true
   )
 
   return arrangeCommentsInDescendingTimestampOrder(allCanisterQueryResult, limit, getTimestampSK)
@@ -279,7 +281,8 @@ export async function getCommentsByScore(commentClient: ActorClient<IndexCaniste
       [false] // descending order
     ),
     settledCommentsResultReducer,
-    { comments: [], nextKeys: [] }
+    { comments: [], nextKeys: [] },
+    true
   )
 
   return arrangeCommentsByScoreAndNextKeys(allCanisterQueryResult, limit)
@@ -313,6 +316,7 @@ export async function getCommentCanisterMetrics(commentClient: ActorClient<Index
   let allCanisterQueryResult = await commentClient.queryWithCanisterIdMapping<Comment["getCanisterMetrics"]>(
     pk,
     (actor) => actor.getCanisterMetrics(),
+    true
   );
   console.log("all canister query result", allCanisterQueryResult)
   return reduceMetricResults(allCanisterQueryResult)
@@ -322,4 +326,23 @@ export async function getPKToCanisterMapping(indexClient: IndexClient<IndexCanis
   // @ts-ignore weird idl type error
   return indexClient.indexCanisterActor.getPKToCanisterMapping();
 };
+
+// Calls the getPK() method with each of the partition keys used in the application in order to cache the partition key
+// to canisterId mapping results in the indexClient canisterMap cache
+//
+// TODO: refine this use case into an API so that applications can preload these mappings and make better use of the
+// candb-client caching mechanism
+export async function cachePKToCanisterMapping(commentClient: ActorClient<IndexCanister, Comment>) {
+  const startDate = new Date(Date.UTC(2021, 6, 13));
+  const endDate = new Date(Date.UTC(2021, 9, 26));
+  const dates = getDatesInRange(startDate, endDate)
+  await Promise.all(dates.map(d => {
+    const pk = `comment#${formatDate(d)}`
+    return commentClient.query<Comment['getPK']>(
+      pk,
+      (actor) => actor.getPK(),
+      true
+    )
+  }))
+}
 
