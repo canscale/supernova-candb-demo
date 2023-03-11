@@ -1,0 +1,1102 @@
+  300  git status
+  301  git diff ../src/StableRBTree.mo
+  302  git status
+  303  git add src
+  304  git status
+  305  git add dfx.json
+  306  git add package-set.dhall
+  307  git add vessel.dhall
+  308  git status
+  309  git branch
+  310  git checkout -b loadTesting
+  311  git branch
+  312  git commit
+  313  git push origin loadTesting
+  314  dfx build loadTesting
+  315  dfx deploy --network=ic loadTesting
+  316  dfx build loadTesting
+  317  dfx deploy --network=ic loadTesting
+  318  dfx build loadTesting
+  319  dfx deploy --network=ic loadTesting
+  320  dfx build loadTesting
+  321  dfx deploy --network=ic loadTesting
+  322  git status
+  323  git diff
+  324  git branch
+  325  git remote -v
+  326  git fetch origin master
+  327  git pull
+  328  git llog
+  329  git fetch origin tags
+  330  git fetch origin --tags
+  331  git llog
+  332  git tag list
+  333  git fetch origin master --tags
+  334  git fetch origin master --tags --all
+  335  git fetch origin/master --tags
+  336  git fetch origin/master --all --tags
+  337  git fetch origin master --all --tags
+  338  git tag
+  339  git tag
+  340  git status
+  341  git add LICENSE
+  342  git add -u
+  343  git llog
+  344  git commit -m "Add Apache 2.0 License"
+  345  git llog
+  346  git tag v0.2.2
+  347  git branch
+  348  git push origin main && git push origin v0.2.2
+  349  git fetch origin main
+  350  git llog
+  351  git push origin main
+  352  git pull origin main
+  353  git reset --hard
+  354  git rebase origin/main
+  355  git status
+  356  git add -u
+  357  git rebase --continue
+  358  git llog
+  359  git llog
+  360  git status
+  361  git llog --all
+  362  git checkout -b tmp
+  363  git diff 685676a4fd71069d1f6b4e45ef65023e67bdad60 3cbe30b5bc757f859bba05c27df45450c280b86d
+  364  git checkout main
+  365  git reset --hard origin/main
+  366  git llog
+  367  git llog
+  368  git diff 685676a4fd71069d1f6b4e45ef65023e67bdad60 3cbe30b5bc757f859bba05c27df45450c280b86d
+  369  git fetch origin main
+  370  git llog
+  371  git remote -v
+  372  git fetch upstream main
+  373  git llog
+  374  git checkout 1173fec6de0e2771983065dc8d74a3051e7cdf4e
+  375  git status
+  376  git diff
+  377  git stash
+  378  git checkout 1173fec6de0e2771983065dc8d74a3051e7cdf4e
+  379  git checkout main
+  380  git reset --hard 1173fec6de0e2771983065dc8d74a3051e7cdf4e
+  381  git stash pop
+  382  git status
+  383  git add -u
+  384  git commit --amend
+  385  git push upstream main && git push upstream v0.2.2
+  386  /Users/byronbecker/Downloads/motoko-macos-0.6.28/moc ; exit;
+  387  /Users/byronbecker/.cache/dfinity/versions/0.10.0/moc ; exit;
+  388  /Users/byronbecker/.cache/dfinity/versions/0.10.0/moc ; exit;
+  389  /Users/byronbecker/.cache/dfinity/versions/0.10.0/moc ; exit;
+  390  /Users/byronbecker/Downloads/motoko-macos-0.6.28/moc ; exit;
+  391  make test
+  392  make test
+  393  make test
+  394  make test
+  395  make test
+  396  make test
+  397  make test
+  398  make test
+  399  make test
+  400  make test
+  401  make test
+  402  make test
+  403  make test
+  404  make test
+  405  make test
+  406  make test
+  407  make test
+  408  make test
+  409  make test
+  410  make test
+  411  git status
+  412  git diff src/StableRBTree.mo
+  413  git diff
+  414  git diff
+  415  git status
+  416  git reset -- loadTesting/src/main
+  417  git status
+  418  git rm --cached loadTesting/src/main.mo
+  419  git status
+  420  git branch
+  421  git checkout main
+  422  git add loadTesting/src/
+  423  git status
+  424  git stash push loadTesting/src/main
+  425  git status
+  426  git reset
+  427  git status
+  428  git stash push loadTesting/src/main
+  429  git diff loadTesting/src/
+  430  git status
+  431  git add loadTesting/src/main.mo
+  432  git commit --amend
+  433  git stash
+  434  git checkout main
+  435  git stash pop
+  436  make test
+  437  git diff
+  438  git status
+  439  git add -u
+  440  git commit
+  441  git llog
+  442  git tag 0.5.0
+  443  git llog
+  444  git llog
+  445  git tag -d 0.5.0
+  446  git tag v0.5.0
+  447  git llog
+  448  git push origin main && git push origin v0.5.0
+  449  git llog
+  450  make test
+  451  make test
+  452  make test
+  453  make test
+  454  make test
+  455  make test
+  456  make test
+  457  make test
+  458  make test
+  459  make test
+  460  make test
+  461  make test
+  462  make test
+  463  make test
+  464  make test
+  465  make test
+  466  make test
+  467  make test
+  468  make test
+  469  make test
+  470  make test
+  471  make test
+  472  make test
+  473  make test
+  474  make test
+  475  make test
+  476  make test
+  477  make test
+  478  make test
+  479  make test
+  480  make test
+  481  make test
+  482  make test
+  483  make test
+  484  make test
+  485  make test
+  486  make test
+  487  make test
+  488  make test
+  489  make test
+  490  make test
+  491  make test
+  492  make test
+  493  make test
+  494  make test
+  495  make test
+  496  make test
+  497  make test
+  498  make test
+  499  make test
+  500  make test
+  501  make test
+  502  make test
+  503  make test
+  504  make test
+  505  make test
+  506  make test
+  507  make test
+  508  make test
+  509  make test
+  510  git status
+  511  git diff
+  512  make test
+  513  git status
+  514  git llog
+  515  git add -u
+  516  git commit
+  517  git tag v0.6.0
+  518  git push origin main && git push origin v0.6.0
+  519  git status
+  520  make test
+  521  make test
+  522  make test
+  523  make test
+  524  make test
+  525  make test
+  526  make test
+  527  make test
+  528  make test
+  529  make test
+  530  make test
+  531  make test
+  532  git diff 
+  533  git status
+  534  git diff test
+  535  make test
+  536  make test
+  537  make test
+  538  make test
+  539  git status
+  540  git add -u
+  541  git commit
+  542  git llog
+  543  git tag v0.2.0
+  544  git push origin main && git push origin v0.2.0
+  545  git llog
+  546  git llog
+  547  make test
+  548  make test
+  549  make test
+  550  make test
+  551  make test
+  552  make test
+  553  make test
+  554  make test
+  555  make test
+  556  make test
+  557  make test
+  558  make test
+  559  make test
+  560  make test
+  561  make test
+  562  make test
+  563  make test
+  564  make test
+  565  make test
+  566  ls
+  567  cd Workspace
+  568  ls
+  569  dfx wallet
+  570  dfx
+  571  dfx wallet
+  572  dfx wallet name
+  573  dfx wallet --network=ic name
+  574  dfx wallet help
+  575  dfx
+  576  dfx identity
+  577  dfx identity list
+  578  dfx wallet
+  579  dfx wallet addresses
+  580  dfx wallet addresses --network=ic
+  581  dfx wallet --network=ic addresses
+  582  dfx wallet --network=ic controllers
+  583  dfx wallet --network=ic custodians
+  584  dfx wallet balance
+  585  dfx wallet --network=ic balance
+  586  dfx wallet
+  587  dfx 
+  588  dfx identity
+  589  dfx identity --network=ic get-wallet
+  590  dfx identity --network=ic get-principal
+  591  dfx identity new
+  592  dfx identity new --help
+  593  dfx identity new candb-testing
+  594  dfx identity new --network=ic candb-testing
+  595  dfx identity --network=ic new candb-testing
+  596  dfx identity list
+  597  dfx wallet --network=ic controllers
+  598  dfx wallet
+  599  dfx wallet --network=ic add-controller llzaw-3tusr-tgfmp-4gbmg-6xx3u-eacgl-7gjsg-v74ws-4ixk5-xqsox-xae
+  600  dfx canister --network ic status 2ptps-jqaaa-aaaal-qav4q-cai
+  601  dfx canister
+  602  dfx canister --network=ic info 2ptps-jqaaa-aaaal-qav4q-cai
+  603  dfx wallet
+  604  dfx wallet --network=ic controllers
+  605  history
+  606  git branch
+  607  git status
+  608  git stash
+  609  git checkout main
+  610  make test
+  611  git status
+  612  git difff
+  613  git diff
+  614  git tags
+  615  git tag
+  616  git llog
+  617  git tag list
+  618  git commit -m "Update variant names to be lowercase"
+  619  git llog
+  620  git add -u
+  621  git commit -m "Update variant names to be lowercase"
+  622  git status
+  623  git status
+  624  git add -u
+  625  commit --amend
+  626  git commit --amend
+  627  make test
+  628  make test
+  629  make test
+  630  make test
+  631  make test
+  632  make test
+  633  make test
+  634  make test
+  635  make test
+  636  make test
+  637  make test
+  638  make test
+  639  make test
+  640  make test
+  641  make test
+  642  make test
+  643  make test
+  644  make test
+  645  make test
+  646  make test
+  647  make test
+  648  make test
+  649  make test
+  650  make test
+  651  make test
+  652  make test
+  653  make test
+  654  make test
+  655  make test
+  656  make test
+  657  make test
+  658  make test
+  659  make test
+  660  git status
+  661  git add test/
+  662  git status
+  663  git status
+  664  make test
+  665  git status
+  666  git diff
+  667  git reset
+  668  git diff
+  669  git status
+  670  git add test/EntityTest.mo
+  671  git add -u
+  672  git llog
+  673  git commit
+  674  git checkout -b attribute-value-variant-improvements
+  675  git remote -v
+  676  git push origin attribute-value-variant-improvements
+  677  make test
+  678  git llog
+  679  git branch
+  680  git llog
+  681  git checkout auto-scaline-poc
+  682  git checkout auto-scaling-poc
+  683  git rebase main
+  684  git stash pop
+  685  git status
+  686  git llog
+  687  git stash
+  688  git branch
+  689  git checkout main
+  690  make test
+  691  make test
+  692  make test
+  693  make test
+  694  make test
+  695  make test
+  696  make test
+  697  make test
+  698  make test
+  699  make test
+  700  make test
+  701  make test
+  702  make test
+  703  make test
+  704  make test
+  705  make test
+  706  git status
+  707  make test
+  708  git status
+  709  git diff
+  710  git status
+  711  git add -u
+  712  git commit
+  713  git branch
+  714  git push origin main
+  715  git fetch origin main
+  716  git rebase origin main
+  717  git push origin main
+  718  git branch
+  719  git checkout auto-scaling-poc
+  720  git rebase main
+  721  git stash pop
+  722  ls
+  723  cd examples/multiCanister
+  724  ls
+  725  dfx build multi
+  726  dfx build multi
+  727  dfx build multi
+  728  dfx build multi
+  729  make test
+  730  dfx build multi
+  731  dfx build multi
+  732  dfx build multi
+  733  dfx build multi
+  734  dfx build multi
+  735  dfx build multi
+  736  dfx build multi
+  737  dfx build multi
+  738  dfx build multi
+  739  dfx build multi
+  740  dfx build multi
+  741  dfx build multi
+  742  dfx build multi
+  743  dfx build multi
+  744  dfx build multi
+  745  dfx build multi
+  746  dfx build multi
+  747  dfx build multi
+  748  dfx build multi
+  749  dfx build multi
+  750  dfx build multi
+  751  dfx build multi
+  752  dfx build multi
+  753  dfx build multi
+  754  dfx build multi
+  755  dfx build multi
+  756  dfx build multi
+  757  dfx build multi
+  758  dfx build multi
+  759  dfx build multi
+  760  dfx build multi
+  761  dfx build multi
+  762  dfx build multi
+  763  dfx build multi
+  764  dfx build multi
+  765  dfx build multi
+  766  dfx build multi
+  767  dfx build multi
+  768  dfx build multi
+  769  dfx build multi
+  770  dfx build multi
+  771  dfx build multi
+  772  dfx build multi
+  773  dfx build multi
+  774  dfx build multi
+  775  dfx build multi
+  776  dfx build multi
+  777  dfx build multi
+  778  dfx build multi
+  779  dfx build multi
+  780  dfx build multi
+  781  dfx build multi
+  782  dfx build multi
+  783  dfx build multi
+  784  dfx build multi
+  785  dfx build multi
+  786  dfx build multi
+  787  dfx build multi
+  788  dfx build multi
+  789  dfx build multi
+  790  dfx build multi
+  791  dfx build multi
+  792  dfx build multi
+  793  dfx build multi
+  794  dfx build multi
+  795  dfx build multi
+  796  dfx build multi
+  797  dfx build multi
+  798  dfx build multi
+  799  dfx build multi
+  800  dfx build multi
+  801  dfx build multi
+  802  dfx build multi
+  803  dfx build multi
+  804  dfx build multi
+  805  dfx build multi
+  806  dfx build multi
+  807  dfx build multi
+  808  dfx build multi
+  809  dfx build multi
+  810  dfx build multi
+  811  dfx build multi
+  812  dfx build multi
+  813  dfx build multi
+  814  dfx build multi
+  815  dfx build multi
+  816  dfx build multi
+  817  dfx build multi
+  818  dfx build multi
+  819  dfx build multi
+  820  dfx build multi
+  821  dfx build multi
+  822  dfx build multi
+  823  dfx build multi
+  824  dfx build multi
+  825  dfx build multi
+  826  dfx build multi
+  827  dfx build multi
+  828  dfx build multi
+  829  dfx build multi
+  830  dfx build multi
+  831  dfx build multi
+  832  dfx build multi
+  833  dfx build multi
+  834  dfx build multi
+  835  dfx build multi
+  836  dfx build multi
+  837  dfx build multi
+  838  dfx build multi
+  839  dfx build multi
+  840  dfx build multi
+  841  dfx build multi
+  842  dfx build multi
+  843  dfx build multi
+  844  dfx build multi
+  845  dfx build multi
+  846  dfx build multi
+  847  dfx build multi
+  848  make test
+  849  ls
+  850  cd ../
+  851  ls
+  852  cd ../
+  853  make test
+  854  make test
+  855  make test
+  856  make test
+  857  make test
+  858  make test
+  859  make test
+  860  make test
+  861  git status
+  862  npm install generate-template-files
+  863  node generate.js
+  864  node src/generate.js
+  865  cd ../
+  866  git clone https://github.com/krpeacock/node-identity-pem.git
+  867  npm start
+  868  npm i && npm start
+  869  npm run start
+  870  npm start
+  871  git status
+  872  git fetch origin master
+  873  git branch
+  874  git pull
+  875  npm run generate
+  876  npm run generate
+  877  npm run generate
+  878  npm run generate
+  879  npm run generate
+  880  npm run generate
+  881  npm run generate
+  882  npm run generate
+  883  npm run generate
+  884  npm run generate
+  885  npm run generate
+  886  npm run generate
+  887  npm run generate
+  888  npm run generate
+  889  npm run generate
+  890  npm run generate
+  891  npm run generate --trace-deprecation
+  892  nvm
+  893  nvm ls
+  894  nvm use stable
+  895  npm run generate
+  896  nvm use default
+  897  npm run generate
+  898  npm i -D hygen
+  899  npx hygen init actor
+  900  npx hygen init self
+  901  hygen generator new actor
+  902  npx hygen generator new actor
+  903  npm uninstall hygen
+  904  git status
+  905  npm run generate
+  906  npm run generate
+  907  npm run generate
+  908  npm run generate
+  909  npm run generate
+  910  npm run generate
+  911  npm run generate
+  912  npm run generate
+  913  npm run generate
+  914  npm run generate
+  915  npm run generate
+  916  npm run generate
+  917  npm run generate
+  918  npm run generate
+  919  npm run generate
+  920  npm run generate
+  921  npm run generate
+  922  npm run generate
+  923  npm run generate
+  924  npm run generate
+  925  npm run generate
+  926  npm run generate
+  927  git statuss
+  928  git status
+  929  git init
+  930  git status
+  931  vim .gitignore
+  932  git status
+  933  npm i
+  934  npm uninstall generate-template-files && npm i -D generate-template-files
+  935  npm run generate
+  936  cd ../
+  937  mv candb-actor-template candb-quickstart-template
+  938  ls
+  939  cd candb-quickstart-template/
+  940  ls
+  941  git branch
+  942  gh pr checkout https://github.com/ByronBecker/motoko-color/pull/2
+  943  git status
+  944  git diff
+  945  git reset --hard
+  946  gh pr checkout https://github.com/ByronBecker/motoko-color/pull/2
+  947  make test
+  948  make test
+  949  make test
+  950  make test
+  951  make test
+  952  git fetch origin main
+  953  git checkout main
+  954  git pull
+  955  git llog
+  956  git llog
+  957  git tag v1.1.0
+  958  git llog
+  959  git push origin v1.1.0
+  960  git remote add origin git@github.com:canscale/candb-quickstart-template.git
+  961  git fetch origin main
+  962  git llog
+  963  git status
+  964  git add *
+  965  git status
+  966  git add .gitignore
+  967  git status
+  968  git commit -m "Added IndexCanister and ActorCanister templates and generation logic using generate-template-files plugin"
+  969  git llog
+  970  git checkout -b main
+  971  git rebase origin/main
+  972  npm run generate
+  973  git status
+  974  git add -u
+  975  git status
+  976  git status
+  977  git add -u
+  978  git commit --amend
+  979  git push origin main
+  980  git status
+  981  git status
+  982  git add -u
+  983  git commit --amend
+  984  git push origin main -f
+  985  git add -u
+  986  git commit --amend
+  987  git push origin main -f
+  988  git status
+  989  git diff tools/templates/IndexCanister.mo
+  990  git status
+  991  git add -u
+  992  git commit -m "Add additional @required and @recommended annotations for template methods to help guide the developer"
+  993  git push origin main
+  994  npm run generate
+  995  npm run generate
+  996  cd ../
+  997  ls
+  998  git clone git@github.com:canscale/supernova-candb-demo.git
+  999  /Users/byronbecker/.cache/dfinity/versions/0.10.0/mo-doc ; exit;
+ 1000  /Users/byronbecker/.cache/dfinity/versions/0.10.0/mo-doc ; exit;
+ 1001  cd ../backend
+ 1002  ls
+ 1003  dfx canister create index
+ 1004  dfx build index
+ 1005  dfx build index
+ 1006  dfx build index
+ 1007  dfx build index
+ 1008  dfx build index
+ 1009  dfx canister create comment
+ 1010  dfx build comment
+ 1011  dfx build comment
+ 1012  dfx build comment
+ 1013  dfx build comment
+ 1014  dfx build comment
+ 1015  dfx build comment
+ 1016  dfx build comment
+ 1017  dfx build comment
+ 1018  dfx generate
+ 1019  dfx deploy index
+ 1020  dfx build index
+ 1021  dfx build index
+ 1022  dfx build index
+ 1023  dfx deploy index
+ 1024  npm run copy-declarations
+ 1025  npm run copy-declarations
+ 1026  sed -i '$ d ' src/declarations/comment/index.js
+ 1027  sed -i '' -e '$ d' src/declarations/comment/index.js
+ 1028  man sed
+ 1029  sed -i 'hello' -e '$ d' src/declarations/comment/index.js
+ 1030  sed -i -e '$ d' src/declarations/comment/index.js
+ 1031  sed -i -e '$ s/^/#/' src/declarations/comment/index.js
+ 1032  sed -i -e '$ s/^/#/' src/declarations/comment/index.js
+ 1033  sed -i -e '$s/^/#/' src/declarations/comment/index.js
+ 1034  sed -i '' -e '$s/^/#/' src/declarations/comment/index.js
+ 1035  sed -i '' -e '$s/^/#/' src/declarations/comment/index.js
+ 1036  sed -i '' -e '$s/^/\\/' src/declarations/comment/index.js
+ 1037  sed -i '' -e '$s/^/\\\\/' src/declarations/comment/index.js
+ 1038  sed -i '' -e '$s/^/\\/' src/declarations/comment/index.js
+ 1039  sed -i '' -e '$s/^////' src/declarations/comment/index.js
+ 1040  sed -i '' -e '$s/^/\/\//' src/declarations/comment/index.js
+ 1041  ./comment_last_line.sh
+ 1042  ls -l comment_last_line.sh
+ 1043  chmod 654 comment_last_line.sh
+ 1044  ls -l comment_last_line.sh
+ 1045  ./comment_last_line.sh
+ 1046  chmod 744 comment_last_line.sh
+ 1047  ./comment_last_line.sh
+ 1048  ./comment_last_line.sh
+ 1049  ./comment_last_line.sh
+ 1050  ./comment_last_line.sh
+ 1051  ./comment_last_line.sh
+ 1052  ./comment_last_line.sh
+ 1053  ./comment_last_line.sh
+ 1054  ./comment_last_line.sh
+ 1055  ls
+ 1056  ls
+ 1057  ./comment_last_line.sh
+ 1058  ./comment_last_line.sh
+ 1059  npm run copy-declarations
+ 1060  ls
+ 1061  npm run copy-declarations
+ 1062  dfx canister status zv3kb-miaaa-aaaaa-aaglq-cai
+ 1063  npm run copy-declarations
+ 1064  dfx build index
+ 1065  dfx canister install index --mode=reinstall
+ 1066  dfx canister delete zv3kb-miaaa-aaaaa-aaglq-cai
+ 1067  dfx canister stop zv3kb-miaaa-aaaaa-aaglq-cai && dfx canister delete zv3kb-miaaa-aaaaa-aaglq-cai
+ 1068  npm run copy-declarations
+ 1069  cp -r src/declarations ../frontend/declarations
+ 1070  cp -rf src/declarations ../frontend/declarations
+ 1071  cp src/declarations ../frontend/declarations
+ 1072  cp -R src/declarations ../frontend/declarations
+ 1073  cp -r src/declarations ../frontend/declarations
+ 1074  dfx build user
+ 1075  dfx build comment
+ 1076  dfx canister install -m=upgrade yyvop-daaaa-aaaaa-aagma-cai
+ 1077  dfx build index
+ 1078  dfx build index
+ 1079  dfx deploy index
+ 1080  npm run copy-declarations
+ 1081  cp -r src/declarations ../frontend/declarations
+ 1082  cp -rT src/declarations ../frontend/declarations
+ 1083  cp -rTf src/declarations ../frontend/declarations
+ 1084  cp -rf src/declarations ../frontend/declarations
+ 1085  cp -r src/declarations ../frontend/declarations
+ 1086  cp -r src/declarations ../frontend/declarations
+ 1087  cp -r src/declarations ../frontend/declarations
+ 1088  cp -r src/declarations ../frontend/declarations
+ 1089  cp -r src/declarations ../frontend/declarations
+ 1090  cp -r src/declarations ../frontend/declarations
+ 1091  cp -r src/declarations/* ../frontend/declarations
+ 1092  dfx build comment
+ 1093  npm run copy-declarations
+ 1094  dfx build index
+ 1095  dfx deploy index
+ 1096  dfx build user
+ 1097  dfx build comment
+ 1098  dfx build comment
+ 1099  dfx build index
+ 1100  dfx deploy index
+ 1101  dfx cansiter delete yyvop-daaaa-aaaaa-aagma-cai
+ 1102  dfx canister stop yyvop-daaaa-aaaaa-aagma-cai && dfx canister delete yyvop-daaaa-aaaaa-aagma-cai
+ 1103  dfx canister stop y7ui3-oyaaa-aaaaa-aagmq-cai && dfx canister delete y7ui3-oyaaa-aaaaa-aagmq-cai
+ 1104  dfx canister stop ywxdh-yqaaa-aaaaa-aagna-cai && dfx canister delete ywxdh-yqaaa-aaaaa-aagna-cai
+ 1105  dfx canister stop yrwft-viaaa-aaaaa-aagnq-cai && dfx canister delete yrwft-viaaa-aaaaa-aagnq-cai
+ 1106  dfx canister install -m reinstall index
+ 1107  dfx canister stop 5rjfh-jaaaa-aaaaa-aagqa-cai && dfx canister delete 5rjfh-jaaaa-aaaaa-aagqa-cai && dfx canister stop yns7c-ciaaa-aaaaa-aagpq-cai && dfx canister delete yns7c-ciaaa-aaaaa-aagpq-cai && dfx canister stop yktzw-pqaaa-aaaaa-aagpa-cai && dfx canister delete yktzw-pqaaa-aaaaa-aagpa-cai && dfx canister stop ydqsk-zyaaa-aaaaa-aagoq-cai && dfx canister delete ydqsk-zyaaa-aaaaa-aagoq-cai
+ 1108  dfx build index && dfx canister install -m reinstall index
+ 1109  dfx build user
+ 1110  dfx build comment
+ 1111  dfx build index && dfx deploy index
+ 1112  dfx build user
+ 1113  dfx build comment
+ 1114  dfx build comment
+ 1115  dfx deploy index
+ 1116  dfx canister stop 5widt-eyaaa-aaaaa-aagqq-cai && dfx canister delete 5widt-eyaaa-aaaaa-aagqq-cai && dfx deploy index
+ 1117  dfx canister install -m reinstall index
+ 1118  npm run copy-declaration
+ 1119  npm run copy-declarations
+ 1120  dfx build index
+ 1121  dfx canister stop 5widt-eyaaa-aaaaa-aagqq-cai
+ 1122  dfx build index && dfx canister install index -m reinstall
+ 1123  dfx build index && dfx canister install index -m reinstall
+ 1124  dfx canister status index
+ 1125  dfx canister stop index && dfx canister delete index && dfx canister create index && dfx deploy index
+ 1126  dfx build user
+ 1127  dfx build comment
+ 1128  dfx build comment
+ 1129  dfx build comment
+ 1130  dfx build comment
+ 1131  dfx build comment
+ 1132  dfx build comment
+ 1133  dfx build comment
+ 1134  dfx build copy-declarations
+ 1135  npm run copy-declarations
+ 1136  npm run refresh-index
+ 1137  npm run copy-declarations
+ 1138  dfx build comment && npm run copy-declarations
+ 1139  dfx build index && dfx deploy index
+ 1140  npm run refresh-index
+ 1141  dfx
+ 1142  dfx wallet
+ 1143  dfx wallet balance
+ 1144  dfx canister
+ 1145  dfx canister deposit-cycles
+ 1146  dfx canister deposit-cycles 5000000000000 4hc5m-4qaaa-aaaaa-aagva-cai
+ 1147  dfx canister --no-wallet deposit-cycles 5000000000000 4hc5m-4qaaa-aaaaa-aagva-cai
+ 1148  dfx canister --wallet deposit-cycles 5000000000000 4hc5m-4qaaa-aaaaa-aagva-cai
+ 1149  dfx canister deposit-cycles 5000000000000 4hc5m-4qaaa-aaaaa-aagva-cai
+ 1150  dfx canister status index
+ 1151  npm run refresh-index
+ 1152  dfx build index && dfx deploy index
+ 1153  npm run refresh-index
+ 1154  dfx canister status 7zt2c-3aaaa-aaaaa-aag4a-cai
+ 1155  76s4w-wyaaa-aaaaa-aag4q-cai
+ 1156  dfx canister status 76s4w-wyaaa-aaaaa-aag4q-cai
+ 1157  dfx
+ 1158  dfx canister
+ 1159  dfx canister status index
+ 1160  dfx build comment && dfx build index
+ 1161  dfx wallet
+ 1162  dfx identity
+ 1163  dfx identity deploy-wallet
+ 1164  dfx identity get-wallet
+ 1165  dfx wallet
+ 1166  dfx wallet name
+ 1167  dfx wallet set-name local
+ 1168  dfx wallet balance
+ 1169  cd identity
+ 1170  dfx identity
+ 1171  dfx canister
+ 1172  dfx canister deposit-cycles
+ 1173  dfx canister deposit-cycles 8000000000000 index
+ 1174  dfx canister --wallet=local deposit-cycles 8000000000000 index
+ 1175  dfx canister status index
+ 1176  dfx canister
+ 1177  dfx canister id index
+ 1178  dfx canister --wallet=local deposit-cycles 8000000000000 6t4yy-zqaaa-aaaaa-aag3a-cai
+ 1179  dfx
+ 1180  dfx canister --wallet=local deposit-cycles 8000000000000 
+ 1181  dfx canister --wallet=local index  8000000000000
+ 1182  dfx canister --wallet=local 6t4yy-zqaaa-aaaaa-aag3a-cai 8000000000000
+ 1183  dfx canister --wallet=local deposit-cycles index 8000000000000
+ 1184  dfx canister --wallet=local deposit-cycles 8000000000000 6t4yy-zqaaa-aaaaa-aag3a-cai
+ 1185  dfx canister --wallet=local deposit-cycles 8000000000000 --all
+ 1186  dfx canister --wallet=local deposit-cycles 8000000000000 --all
+ 1187  dfx canister --wallet=local deposit-cycles 8000000000000
+ 1188  dfx canister --wallet=local deposit-cycles --all 8000000000000
+ 1189  dfx canister deposit-cycles --all 8000000000000
+ 1190  dfx canister deposit-cycles --all --wallet=local 8000000000000
+ 1191  dfx canister deposit-cycles --wallet=local 8000000000000
+ 1192  dfx canister deposit-cycles --wallet=local
+ 1193  dfx canister deposit-cycles
+ 1194  dfx canister
+ 1195  dfx canister info index
+ 1196  dfx canister --wallet=local deposit-cycles 8000000000000 6t4yy-zqaaa-aaaaa-aag3a-cai
+ 1197  dfx canister deposit-cycles index
+ 1198  dfx canister deposit-cycles 8000000000000 index
+ 1199  dfx canister --wallet=local deposit-cycles 8000000000000 index
+ 1200  dfx build index && dfx deploy index
+ 1201  dfx canister --wallet=local deposit-cycles 8000000000000 "6t4yy-zqaaa-aaaaa-aag3a-cai"
+ 1202  dfx canister --wallet=local deposit-cycles 8000000000000 6t4yy-zqaaa-aaaaa-aag3a-cai
+ 1203  dfx canister --wallet=local deposit-cycles 8000000000000 index
+ 1204  dfx canister deposit-cycles 8000000000000 index
+ 1205  dfx wallet
+ 1206  dfx wallet send 
+ 1207  dfx wallet send index 8000000000000
+ 1208  dfx wallet deposit-cycles
+ 1209  dfx canister deposit-cycles
+ 1210  dfx canister --wallet=local deposit-cycles 8000000000000 canister=index
+ 1211  dfx canister --wallet=local deposit-cycles 8000000000000
+ 1212  dfx canister --wallet=local deposit-cycles index 8000000000000
+ 1213  dfx canister --wallet=local deposit-cycles --all 8000000000000
+ 1214  dfx wallet
+ 1215  dfx identity
+ 1216  dfx identity get-wallet
+ 1217  dfx canister --wallet=zj7qq-3iaaa-aaaaa-aagjq-cai deposit-cycles 8000000000000 index
+ 1218  dfx deploy index
+ 1219  dfx canister --network=ic status 5w2vy-piaaa-aaaan-qaina-cai
+ 1220  dfx canister status index
+ 1221  dfx canister refresh index
+ 1222  npm run refresh-index
+ 1223  dfx build comment
+ 1224  dfx build index && dfx deploy index
+ 1225  dfx canister stop ujhfu-3yaaa-aaaaa-aahcq-cai && dfx canister delete ujhfu-3yaaa-aaaaa-aahcq-cai
+ 1226  dfx canister install -m reinstall index
+ 1227  dfx canister install -m reinstall index
+ 1228  dfx canister install -m reinstall index
+ 1229  dfx canister --wallet=zj7qq-3iaaa-aaaaa-aagjq-cai deposit-cycles 8000000000000 index
+ 1230  dfx deploy index
+ 1231  dfx canister --wallet=zj7qq-3iaaa-aaaaa-aagjq-cai deposit-cycles 8000000000000 index
+ 1232  dfx canister --network=ic status 5w2vy-piaaa-aaaan-qaina-cai
+ 1233  dfx build comment
+ 1234  dfx build comment
+ 1235  dfx build comment
+ 1236  dfx build comment
+ 1237  dfx build comment
+ 1238  dfx build index
+ 1239  dfx canister install index -m reinstall
+ 1240  dfx canister status index
+ 1241  dfx build index
+ 1242  dfx canister install index -m reinstall
+ 1243  dfx canister install index -m reinstall
+ 1244  dfx canister status index
+ 1245  dfx canister --wallet=zj7qq-3iaaa-aaaaa-aagjq-cai deposit-cycles 8000000000000 index
+ 1246  npm run refresh-index
+ 1247  npm run copy-declarations
+ 1248  dfx canister --wallet=zj7qq-3iaaa-aaaaa-aagjq-cai deposit-cycles 20000000000000 index
+ 1249  dfx canister status index
+ 1250  dfx canister status xfqvd-qyaaa-aaaaa-aahiq-cai
+ 1251  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1252  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1253  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1254  dfx canister call getCount
+ 1255  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getCount
+ 1256  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1257  dfx build comment
+ 1258  dfx build comment
+ 1259  dfx build index
+ 1260  dfx canister install index -m upgrade
+ 1261  dfx canister status xfqvd-qyaaa-aaaaa-aahiq-cai
+ 1262  dfx canister
+ 1263  dfx
+ 1264  dfx ledger
+ 1265  dfx --version
+ 1266  dfx canister
+ 1267  dfx
+ 1268  dfx --version
+ 1269  dfx canister status xfqvd-qyaaa-aaaaa-aahiq-cai
+ 1270  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getCount
+ 1271  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1272  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1273  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getHeapSize
+ 1274  dfx canister call xfqvd-qyaaa-aaaaa-aahiq-cai getCount
+ 1275  dfx canister call xmt67-gqaaa-aaaaa-aahja-cai getCount
+ 1276  dfx canister call xmt67-gqaaa-aaaaa-aahja-cai getHeapSize
+ 1277  dfx canister call xmt67-gqaaa-aaaaa-aahja-cai getCount
+ 1278  npm run copy-declarations
+ 1279  npm run copy-declarations
+ 1280  dfx build comment
+ 1281  dfx build comment
+ 1282  dfx build comment
+ 1283  dfx build comment
+ 1284  dfx build comment
+ 1285  dfx build comment
+ 1286  dfx build comment
+ 1287  dfx build index
+ 1288  dfx canister install -m upgrade index
+ 1289  npm run copy-declarations
+ 1290  npm run refresh-declarations
+ 1291  npm run refresh-declarations
+ 1292  npm run copy-declarations
+ 1293  dfx canister status index
+ 1294  dfx build index
+ 1295  dfx build index
+ 1296  dfx build index
+ 1297  dfx build index
+ 1298  dfx build index
+ 1299  dfx build index
+ 1300  dfx build index
+ 1301  dfx identity
+ 1302  dfx wallet
+ 1303  dfx wallet --network ic balance
+ 1304  dfx canister
+ 1305  dfx canister --network=ic create --help
+ 1306  dfx canister --network=ic create --with-cycles 10000000000
+ 1307  dfx canister --network=ic create --with-cycles 10000000000 index
+ 1308  dfx canister --network=ic create --with-cycles 10000000000000 index
+ 1309  dfx canister --network=ic status index
+ 1310  dfx canister --network=ic call getCanistersByPK test
+ 1311  dfx canister --network=ic call --help
+ 1312  dfx canister --network=ic call index getCanistersByPK test
+ 1313  dfx canister --network=ic call index getCanistersByPK "('test')"
+ 1314  dfx canister --network=ic call index getCanistersByPK "("test")"
+ 1315  dfx canister --network=ic call index getCanistersByPK "(text "test")"
+ 1316  dfx canister --network=ic call index getCanistersByPK '("test")'
+ 1317  dfx canister --network=ic install index
+ 1318  dfx canister --network=ic install --help
+ 1319  dfx build index
+ 1320  dfx deploy --network=ic index
+ 1321  dfx canister --network=ic status index
+ 1322  dfx canister --network=ic call index getCanistersByPK '("test")'
+ 1323  dfx canister --network=ic status index
+ 1324  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1325  dfx canister --network=ic delete t5uw7-jaaaa-aaaan-qajmq-cai
+ 1326  dfx build comment
+ 1327  dfx build index
+ 1328  dfx canister --network ic install -m=upgrade index
+ 1329  npm run refresh-declarations
+ 1330  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1331  dfx canister
+ 1332  dfx canister --network ic deposit-cycles --help
+ 1333  dfx canister --network ic deposit-cycles 2000000000000 t5uw7-jaaaa-aaaan-qajmq-cai
+ 1334  dfx canister --network=ic --wallet=5w2vy-piaaa-aaaan-qaina-cai deposit-cycles 2000000000000 t5uw7-jaaaa-aaaan-qajmq-cai
+ 1335  dfx canister --network=ic --wallet=5w2vy-piaaa-aaaan-qaina-cai deposit-cycles 2000000000000 t5uw7-jaaaa-aaaan-qajmq-cai
+ 1336  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1337  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1338  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1339  dfx canister 
+ 1340  dfx canister --network=ic info t5uw7-jaaaa-aaaan-qajmq-cai
+ 1341  dfx
+ 1342  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1343  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1344  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1345  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1346  dfx build comment && npm run refresh-declarations
+ 1347  dfx build comment && npm run refresh-declarations
+ 1348  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai getNatCount
+ 1349  dfx canister --network=ic install -m upgrade --help
+ 1350  dfx canister --network=ic install -m upgrade t5uw7-jaaaa-aaaan-qajmq-cai .dfx/local/canisters/comment/comment.wasm
+ 1351  dfx canister --network=ic install -m upgrade t5uw7-jaaaa-aaaan-qajmq-cai --wasm .dfx/local/canisters/comment/comment.wasm
+ 1352  dfx canister --network=ic install -m upgrade t5uw7-jaaaa-aaaan-qajmq-cai --wasm .dfx/local/canisters/comment/comment.wasm
+ 1353  dfx canister --network=ic install -m upgrade comment --wasm .dfx/local/canisters/comment/comment.wasm
+ 1354  dfx canister
+ 1355  dfx canister --network=ic stop t5uw7-jaaaa-aaaan-qajmq-cai
+ 1356  dfx canister --network=ic status t5uw7-jaaaa-aaaan-qajmq-cai
+ 1357  dfx canister --network=ic start t5uw7-jaaaa-aaaan-qajmq-cai
+ 1358  dfx canister stop
+ 1359  dfx canister --network=ic stop t5uw7-jaaaa-aaaan-qajmq-cai
+ 1360  dfx canister --network=ic install -m upgrade comment --wasm .dfx/local/canisters/comment/comment.wasm
+ 1361  dfx canister --network=ic start t5uw7-jaaaa-aaaan-qajmq-cai
+ 1362  dfx build comment
+ 1363  npm run refresh-declarations
+ 1364  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm '({pk="comment"; scalingOptions={autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1365  dfx canister install --help
+ 1366  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '({pk="comment"; scalingOptions={autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1367  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions={autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1368  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1369  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions: record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1370  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions= record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1371  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions:record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1372  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}}'
+ 1373  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"};}'
+ 1374  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType="#count"}})'
+ 1375  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType=variant "#count"}})'
+ 1376  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType=variant {#count=null}})'
+ 1377  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType=variant {count=null}})'
+ 1378  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000; limitType=variant {count=null}}})'
+ 1379  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000n; limitType=variant {count=null}}})'
+ 1380  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '(10000000000)'
+ 1381  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '("10000000000")'
+ 1382  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '(5)'
+ 1383  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat 3
+ 1384  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat (3)
+ 1385  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '()'
+ 1386  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '(float 8)'
+ 1387  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '(8n)'
+ 1388  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '("8n")'
+ 1389  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '("hi")'
+ 1390  dfx canister --network=ic call t5uw7-jaaaa-aaaan-qajmq-cai incrementByNat '(8:nat)'
+ 1391  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {pk="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000:nat; limitType=variant {count=null}}})'
+ 1392  dfx canister --network=ic install -m reinstall comment --wasm .dfx/local/canisters/comment/comment.wasm --argument '(record {primaryKey="comment"; scalingOptions=record {autoScalingCanisterId="t2vql-eyaaa-aaaan-qajma-cai"; limit=10000000000:nat; limitType=variant {count=null}}})'
+ 1393  dfx build index
+ 1394  dfx canister --network=ic install -m upgrade index
+ 1395  dfx build index
+ 1396  dfx canister --network=ic install -m upgrade index
+ 1397  dfx build index
+ 1398  dfx build --network=ic index
+ 1399  dfx canister --network=ic install -m upgrade index
+ 1400  history
+ 1401  man history

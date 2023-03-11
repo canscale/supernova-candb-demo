@@ -110,6 +110,7 @@ shared ({ caller = creator }) actor class Comment({
           ("score", #int(c.score)),
         ]
       });
+
       // allow for query by subreddit and timestamp
       await CanDB.put(db, {
         sk = "subreddit#" # c.subredditName # "#timestamp#" # c.isoString # "#id#" # c.commentId;

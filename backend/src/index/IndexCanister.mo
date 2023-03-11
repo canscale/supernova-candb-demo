@@ -88,7 +88,7 @@ shared ({caller = owner}) actor class IndexCanister() = this {
   // Helper function that creates comment canisters, called by both initial PK creation and auto-scaling
   func createCommentCanister(pk: Text, controllers: ?[Principal]): async Text {
     Debug.print("creating new comment canister with pk=" # pk);
-    Cycles.add(1_200_000_000_000);
+    Cycles.add(500_000_000_000);
     let newUserCanister = await Comment.Comment({
       primaryKey = pk;
       scalingOptions = {
@@ -134,6 +134,7 @@ shared ({caller = owner}) actor class IndexCanister() = this {
   /// Upgrade comment canisters in a PK range, i.e. rolling upgrades (limit is fixed at upgrading the canisters of 5 PKs per call)
   public shared({ caller = caller }) func upgradeCommentCanistersInPKRange(lowerCommentPK: Text, upperCommentPK: Text, wasmModule: Blob): async Admin.UpgradePKRangeResult {
     if (caller != owner) { // basic authorization
+      Debug.print("not authorized");
       return {
         upgradeCanisterResults = [];
         nextKey = null;
