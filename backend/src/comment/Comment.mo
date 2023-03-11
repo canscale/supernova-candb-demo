@@ -28,14 +28,14 @@ import Prim "mo:⛔";
 
 
 shared ({ caller = creator }) actor class Comment({
-  primaryKey: Text;
+  partitionKey: Text;
   scalingOptions: CanDB.ScalingOptions;
   owners: ?[Principal];
 }) = this {
 
   /// @required (may wrap, but must be present in some form in the canister)
   stable let db = CanDB.init({
-    pk = primaryKey;
+    pk = partitionKey;
     scalingOptions = scalingOptions;
   });
 

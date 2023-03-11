@@ -8,6 +8,7 @@ import Text "mo:base/Text";
 import CA "mo:candb/CanisterActions";
 import CanisterMap "mo:candb/CanisterMap";
 import Admin "mo:candb/CanDBAdmin";
+import Utils "mo:candb/Utils";
 import Buffer "mo:stable-buffer/StableBuffer";
 import RBT "mo:stable-rbtree/StableRBTree";
 
@@ -39,40 +40,22 @@ shared ({caller = owner}) actor class IndexCanister() = this {
     }
   };
 
-  /// @modify and @required (Do not delete or change the API interface, but must change/modify the function logic for your given application actor and data model)
-  ///
-  /// This is method is called by CanDB for auto-scaling. It is up to the developer to specify which
-  /// PK prefixes should spin up which canister actor.
-  ///
-  /// If the developer does not utilize this method, auto-scaling will NOT work
-  public shared({caller = caller}) func createAdditionalCanisterForPK(pk: Text): async Text {
-    if (not callingCanisterOwnsPK(caller, pk)) {
-      Debug.trap("error, called by non-controller=" # debug_show(caller));
-    };
-
-    if (Text.startsWith(pk, #text("comment#"))) {
-      await createCommentCanister(pk, ?[owner, Principal.fromActor(this)]);
+  // Autoscale the a specific parition of the comment service
+  public shared({caller = caller}) func autoScaleCommentServiceCanister(pk: Text): async Text {
+    // Auto-Scaling Authorization - if the request to auto-scale the partition is not coming from an existing canister in the partition, reject it
+    if (Utils.callingCanisterOwnsPK(caller, pkToCanisterMap, pk)) {
+      Debug.print("creating an additional canister for pk=" # pk);
+      await createCommentCanister(pk, ?[owner, Principal.fromActor(this)])
     } else {
-      throw Error.reject("creation of additional canister case not covered");
+      throw Error.reject("not authorized");
     };
-  };
-
-  func callingCanisterOwnsPK(caller: Principal, pk: Text): Bool {
-    switch(CanisterMap.get(pkToCanisterMap, pk)) {
-      case null { false };
-      case (?canisterIdsBuffer) {
-        for (canisterId in canisterIdsBuffer.elems.vals()) {
-          if (Principal.toText(caller) == canisterId) {
-            return true;
-          }
-        };
-        return false;
-      }
-    }
   };
 
   /// Creates the provided PK and associated comment canister if the PK does not yet exist
   public shared({caller = creator}) func createCommentCanisterByPK(pk: Text): async ?Text {
+    Debug.print("caller=" # debug_show(creator));
+    Debug.print("owner=" # debug_show(owner));
+
     if (creator != owner) return ?"Not authorized to create a canister"; 
     let canisterIds = getCanisterIdsIfExists(pk);
     // does not exist
@@ -90,11 +73,10 @@ shared ({caller = owner}) actor class IndexCanister() = this {
     Debug.print("creating new comment canister with pk=" # pk);
     Cycles.add(500_000_000_000);
     let newUserCanister = await Comment.Comment({
-      primaryKey = pk;
+      partitionKey = pk;
       scalingOptions = {
-        autoScalingCanisterId = Principal.toText(Principal.fromActor(this));
-        limit = 200_000_000; // Scale out at 200MB
-        limitType = #heapSize;
+        autoScalingHook = autoScaleCommentServiceCanister;
+        sizeLimit = #heapSize(10_000_000);
       };
       owners = controllers;
     });
@@ -124,9 +106,8 @@ shared ({caller = owner}) actor class IndexCanister() = this {
       commentPK, 
       wasmModule,
       {
-        autoScalingCanisterId = Principal.toText(Principal.fromActor(this));
-        limit = 200_000_000; // Scale out at 200MB
-        limitType = #heapSize;
+        autoScalingHook = autoScaleCommentServiceCanister;
+        sizeLimit = #heapSize(10_000_000);
       }
     );
   };
@@ -148,9 +129,8 @@ shared ({caller = owner}) actor class IndexCanister() = this {
       limit = 5; // Fixed to upgrade all canisters for 5 PKs (max if exists) at a time
       wasmModule = wasmModule;
       scalingOptions = {
-        autoScalingCanisterId = Principal.toText(Principal.fromActor(this));
-        limit = 200_000_000; // Scale out at 200MB
-        limitType = #heapSize;
+        autoScalingHook = autoScaleCommentServiceCanister;
+        sizeLimit = #heapSize(10_000_000);
       };
       owners = ?[owner, Principal.fromActor(this)];
     });

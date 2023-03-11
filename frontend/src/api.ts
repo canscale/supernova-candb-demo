@@ -302,11 +302,14 @@ async function reduceMetricResults(metricResults: PromiseSettledResult<AwaitingM
     for (let settledResult of metricResults) {
       if (settledResult.status === 'fulfilled') {
         for (const [k, v] of Object.entries(settledResult.value)) {
-          let value = await v;
-          result[k] = value;
+          try {
+            let value = await v;
+            result[k] = value;
+          } catch(err) {
+            console.error("error getting metrics for canister", k, err)
+          }
         }
-
-      } 
+      }
     }
     resolve(result)
   })
@@ -318,7 +321,6 @@ export async function getCommentCanisterMetrics(commentClient: ActorClient<Index
     (actor) => actor.getCanisterMetrics(),
     true
   );
-  console.log("all canister query result", allCanisterQueryResult)
   return reduceMetricResults(allCanisterQueryResult)
 }
 
